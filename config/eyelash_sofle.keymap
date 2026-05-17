@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 900  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
 
 #include <input/processors.dtsi>
@@ -12,7 +12,7 @@
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 3 1>; };
 
 &msc {
     acceleration-exponent = <1>;      // 0
@@ -21,12 +21,18 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    time-to-max-speed-ms = <250>;
     acceleration-exponent = <1>;
     trigger-period-ms = <16>;
 };
 
 &soft_off { hold-time-ms = <2000>; };
+
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>;
+    quick-tap-ms = <120>;
+};
 
 / {
     scroll_encoder: scroll_encoder {
@@ -68,12 +74,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-
-&mt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <120>;
-};
 
         layer0 {
             bindings = <
