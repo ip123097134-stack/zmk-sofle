@@ -105,7 +105,7 @@
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
-             sensor-bindings = <&scroll_encoder>;
+             sensor-bindings = <&horizontal_scroll>;
             display-name = "LAYER1";
         };
 
