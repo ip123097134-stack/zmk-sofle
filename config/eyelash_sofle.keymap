@@ -69,6 +69,12 @@
     keymap {
         compatible = "zmk,keymap";
 
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>;
+    quick-tap-ms = <120>;
+};
+
         layer0 {
             bindings = <
 &kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
