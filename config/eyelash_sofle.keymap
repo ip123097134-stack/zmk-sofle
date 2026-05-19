@@ -78,7 +78,6 @@
 
         input-processors = <&zip_xy_scaler 4 1>;
     };
-};
     
     combos {
         compatible = "zmk,combos";
